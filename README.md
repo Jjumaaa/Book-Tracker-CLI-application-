@@ -1,27 +1,27 @@
 # Book-Tracker-CLI-application
 
-# 📚 Book Tracker CLI Project
+# Book Tracker CLI Project
 
-## 📖 Project Overview
+## Project Overview
 
 This is a **Command Line Interface (CLI)** application built in Python that helps users manage a collection of books and authors. It uses an **SQLite database** via **SQLAlchemy ORM** to store data. Users can add books, view books, search for authors, and perform various CRUD (Create, Read, Update, Delete) operations.
 
 ---
 
-## 🏗️ Features
+## Features
 
-✅ CLI with menu-driven interface  
-✅ SQLAlchemy ORM for database management  
-✅ 3 related tables: `Book`, `Author`, `Genre`  
-✅ Seed script to prepopulate the database  
-✅ Debug script for development  
-✅ Helper functions for core logic  
-✅ Organized project structure  
-✅ Pipenv for environment management
+SQLAlchemy ORM for database management  
+CLI with menu-driven interface  
+3 related tables: `Book`, `Author`, `Genre`  
+Seed script to prepopulate the database  
+Debug script for development  
+Helper functions for core logic  
+Organized project structure  
+Pipenv for environment management
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 Book-Tracker-CLI/
 ├── Pipfile
@@ -44,9 +44,9 @@ Book-Tracker-CLI/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 1️⃣ Install Dependencies
+### 1. Install Dependencies
 
 ```bash
 pipenv install
@@ -56,7 +56,7 @@ SQLAlchemy
 
 ipdb (for debugging)
 
-2️⃣ Set Your PYTHONPATH
+2️. Set Your PYTHONPATH
 Before running any scripts, set the PYTHONPATH so Python knows where to look for modules.
 
 bash
@@ -65,28 +65,28 @@ Edit
 export PYTHONPATH=.
 
 
-3️⃣ Run the Seed Script
+3️. Run the Seed Script
 bash
 Copy
 Edit
 python lib/seed.py
-✅ It should add the database with sample data.
+ It should add the database with sample data.
 
-4️⃣ Run the CLI
+4️. Run the CLI
 bash
 Copy
 Edit
 python lib/cli.py
-✅ Interact with the app through the terminal!
+ Interact with the app through the terminal!
 
-5️⃣ Run the Debug Script (Optional)
+5️. Run the Debug Script (Optional)
 bash
 Copy
 Edit
 python lib/debug.py
-✅ Drops into an interactive debugging shell (ipdb).
+ Drops into an interactive debugging shell (ipdb).
 
-📚 Helpful Commands
+ Helpful Commands
 Command	Description
 python lib/seed.py	Seed the database with data
 python lib/cli.py	Run the CLI application

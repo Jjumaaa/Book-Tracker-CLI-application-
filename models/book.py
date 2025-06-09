@@ -1,23 +1,19 @@
+# models/book.py
 
-from sqlalchemy import Column, Integer, String, ForeignKey, Table
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from models import Base
-
-book_genre = Table(
-    'book_genre', Base.metadata,
-    Column('book_id', Integer, ForeignKey('books.id')),
-    Column('genre_id', Integer, ForeignKey('genres.id'))
-)
+from models.book_tag import book_tag
 
 class Book(Base):
-    __tablename__ = 'books'
+    __tablename__ = "books"
 
     id = Column(Integer, primary_key=True)
-    title = Column(String, nullable=False)
-    author_id = Column(Integer, ForeignKey('authors.id'))
+    title = Column(String)
+    author_id = Column(Integer, ForeignKey("authors.id"))
 
-    author = relationship('Author', back_populates='books')
-    genres = relationship('Genre', secondary=book_genre, back_populates='books')
+    author = relationship("Author", back_populates="books")
+    tags = relationship("Tag", secondary=book_tag, back_populates="books")
 
     def __repr__(self):
-        return f"<Book {self.id}: {self.title}>"
+        return f"<Book(title='{self.title}')>"
